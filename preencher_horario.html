@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preencher Horário</title>
+</head>
+<body>
+    <h2>Registrar Ponto</h2>
+    {% if mensagem %}
+        <p>{{ mensagem }}</p>
+    {% endif %}
+    <form action="/preencher_horario" method="post">
+        Nomes: <input type="text" name="nomes" placeholder="Ex: João, Maria, José" required><br>
+        Data: <input type="date" name="data" required><br>
+        Hora de Entrada: <input type="time" name="hora_entrada" required><br>
+        Hora de Saída: <input type="time" name="hora_saida" required><br>
+        Local de Trabalho: <input type="text" name="local_trabalho" required><br>
+        Turno:
+        <select name="turno" required>
+            <option value="manha">Manhã</option>
+            <option value="noite">Noite</option>
+        </select><br>
+        <input type="submit" value="Registrar">
+    </form>
+    <a href="/gerar_relatorio">Gerar Relatório</a><br>
+    <a href="/logout">Logout</a>
+</body>
+</html>

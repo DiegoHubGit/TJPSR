@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório</title>
+</head>
+<body>
+    <h2>Relatório de Ponto</h2>
+    {% if mensagem %}
+        <p>{{ mensagem }}</p>
+    {% endif %}
+    <a href="/preencher_horario">Voltar</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>
